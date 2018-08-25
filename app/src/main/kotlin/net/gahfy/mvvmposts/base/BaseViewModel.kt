@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModel
 import net.gahfy.mvvmposts.injection.component.DaggerViewModelInjector
 import net.gahfy.mvvmposts.injection.component.ViewModelInjector
 import net.gahfy.mvvmposts.injection.module.NetworkModule
+import net.gahfy.mvvmposts.ui.post.PomodoroViewModel
 import net.gahfy.mvvmposts.ui.post.PostListViewModel
 
 abstract class BaseViewModel:ViewModel(){
@@ -22,6 +23,7 @@ abstract class BaseViewModel:ViewModel(){
     private fun inject() {
         when (this) {
             is PostListViewModel -> injector.inject(this)
+            is PomodoroViewModel -> injector.inject(this)
         }
     }
 }
