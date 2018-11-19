@@ -4,6 +4,7 @@ import dagger.Component
 import net.gahfy.mvvmposts.injection.module.NetworkModule
 import net.gahfy.mvvmposts.ui.post.PomodoroViewModel
 import net.gahfy.mvvmposts.ui.post.PostListViewModel
+import net.gahfy.mvvmposts.ui.post.PostViewModel
 import javax.inject.Singleton
 
 /**
@@ -17,7 +18,13 @@ interface ViewModelInjector {
      * @param postListViewModel PostListViewModel in which to inject the dependencies
      */
     fun inject(postListViewModel: PostListViewModel)
+
     fun inject(pomodoroViewModel: PomodoroViewModel)
+    /**
+     * Injects required dependencies into the specified PostViewModel.
+     * @param postViewModel PostViewModel in which to inject the dependencies
+     */
+    fun inject(postViewModel: PostViewModel)
 
     @Component.Builder
     interface Builder {
