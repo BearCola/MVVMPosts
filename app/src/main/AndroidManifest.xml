@@ -16,7 +16,8 @@
             android:name=".ui.post.PostListActivity">
 
         </activity>
-        <activity android:name=".ui.post.PomodoroActivity">
+        <activity android:name=".ui.post.PomodoroActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
 
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
